@@ -141,7 +141,7 @@ end
 
 function getP1Stun(game) 
   p1Stun = 0;
-    if isP2Hurt == true then
+    if isP1Hurt == true then
       p1Stun = mem:read_log_u16(0x8808BC92);
     end
   --else if g == "kinst2" then
