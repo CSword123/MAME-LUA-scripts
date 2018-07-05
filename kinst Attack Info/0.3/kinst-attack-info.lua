@@ -177,8 +177,8 @@ function getP1FrameData(game)
   
   if game == "kinst" then
     p1Startup = mem:read_log_u8(0x8808BCC3);
-    p1Active = mem:read_log_u8(0x8808BCB8);
-    
+    p2Active = 0;
+    p2Recovery = 0;
     
     p1FrameData = (p1Startup .. "/" .. p1Active .. "/" .. p1Recovery);
   end
@@ -319,7 +319,7 @@ function getP2FrameData(game)
   
   if game == "kinst" then
     p2Startup = mem:read_log_u8(0x8808BDC3);
-    p2Active = mem:read_log_u8(0x8808BDB8);
+    p2Active = 0;
     p2Recovery = 0;
     
     p2FrameData = (p2Startup .. "/" .. p2Active .. "/" .. p2Recovery);
